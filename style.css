@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 2rem 1rem;
+    background-color: #0d1117;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#search-input {
+    flex: 1;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #1e293b;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+#search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#search-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #860723;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+#search-btn:hover {
+    background-color: #0369a1;
+}
+
+#results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    background-color: #1e293b;
+}
+
+.movie-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+    border-color: #58a6ff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-color: #0d1117;
+}
+
+.movie-card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: white;
+}
+
+.movie-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin: 0 0 8px 0;
+}
+
+.movie-badge {
+    display: inline-block;
+    background: rgba(56, 139, 253, 0.15);
+    color: #58a6ff;
+    border: 1px solid rgba(56, 139, 253, 0.4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.movie-card p {
+    font-size: 0.88rem;
+    color: #8b949e;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Loading & Error States */
+.loading-text {
+    color: #58a6ff;
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+}
+
+.error-banner {
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid rgba(248, 81, 73, 0.4);
+    color: #f85149;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
